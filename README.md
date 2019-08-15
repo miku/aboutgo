@@ -1,6 +1,6 @@
 # Learning Go
 
-Collection of units to learn go.
+Collection of units to learn [Go](https://golang.org/) and related topics.
 
 Inspired by [ardanlabs/gotraining](https://github.com/ardanlabs/gotraining/):
 
