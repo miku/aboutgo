@@ -22,3 +22,30 @@ For more information, see:
 ```
 $ go help modules
 ```
+
+## Do you use new or ampersand (&) on structs?
+
+* [Golang basics struct and new() keyword](https://stackoverflow.com/q/34543430/89391)
+* [Why is there a “new” in Go?](https://softwareengineering.stackexchange.com/q/210399/436)
+* [Why is there a “new” keyword in Go?](https://groups.google.com/forum/#!topic/golang-nuts/K3Ys8qpml2Y)
+
+> [new](https://golang.org/doc/effective_go.html#allocation_new) is a built-in
+> function that *allocates* memory, but unlike its namesakes in some other
+> languages it does not initialize the memory, it only zeros it.
+
+The [address operator](https://golang.org/ref/spec#Address_operators) [...]
+generates a pointer of type `*T` to `x`.
+
+> Also, although this is a lesser point, the meaning of new in Go is not
+the same as in some other languages. All it does is allocate; it does not run
+any type-specific constructor. --
+[https://groups.google.com/forum/#!msg/golang-nuts/kWXYU95XN04/iRfB7YEt57UJ](https://groups.google.com/forum/#!msg/golang-nuts/kWXYU95XN04/iRfB7YEt57UJ)
+
+## Does Go distinguish between stack and heap?
+
+Yes and no. Yes, since both are used and no, since it does not play a role when
+writing Go.
+
+> Again, the whole concept of heap is not part of the Go
+language. -- [https://groups.google.com/d/msg/golang-nuts/kWXYU95XN04/vthkrDeId2cJ](https://groups.google.com/d/msg/golang-nuts/kWXYU95XN04/vthkrDeId2cJ)
+
