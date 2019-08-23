@@ -12,13 +12,13 @@ elements of type `T`.
 
 With *slice notation*, specifying a low and high bound:
 
-```
+```go
 a[low : high]
 ```
 
 * [moretypes/7](https://tour.golang.org/moretypes/7)
 
-```
+```go
 package main
 
 import "fmt"
@@ -35,7 +35,7 @@ func main() {
 
 The underlying (backing) array is allocated implicitly.
 
-```
+```go
 var (
     hits   []int
     temps  []float64
@@ -48,7 +48,7 @@ var (
 
 Initialization with values.
 
-```
+```go
 var s = []string{"Berlin", "Munich", "Hamburg", "Cologne"}
 ```
 
@@ -69,7 +69,7 @@ The builtin functions `len` and `cap` can be used to inspect the values.
 
 If we want to control length and capacity of the slice, we can use the builtin make function.
 
-```
+```go
 package main
 
 import "fmt"
@@ -101,7 +101,7 @@ We can create a slice from an array. But we can also create a slice from
 another slice. We need to keep in mind, that the underlying array will be the
 same.
 
-```
+```go
 package main
 
 import "fmt"
@@ -130,7 +130,7 @@ func main() {
 
 Slices are dynamically sized, so how do we extend them? With the builtin `append` function.
 
-```
+```go
 var s []string
 s = append(s, "a")
 s = append(s, "b")
@@ -147,7 +147,7 @@ insert the new one. This is exactly what `append` does.
 
 The `append` function allows to concatenate two slices as well.
 
-```
+```go
 package main
 
 import "fmt"
