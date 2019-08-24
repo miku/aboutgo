@@ -3,6 +3,8 @@
 > A variable is a storage location for holding a value. The set of permissible
 > values is determined by the variable's type.
 
+Every value in Go has
+
 ## Variable declaration
 
 There are four variants to introduce a variable into a program.
@@ -28,7 +30,13 @@ Declare multiple variables of a type at once:
 var x, y, z int
 ```
 
-The var statement can be used outside functions, e.g.
+The var statement can be used outside functions. Variables declared without an
+explicit initial value are given their [zero value](https://golang.org/ref/spec#The_zero_value).
+
+> Each element of such a variable or value is set to the zero value for its
+> type: false for booleans, 0 for numeric types, "" for strings, and nil for
+> pointers, functions, interfaces, slices, channels, and maps. This
+> initialization is done recursively.
 
 ### Declaration and initialization
 
