@@ -63,7 +63,7 @@ A slice has two properties:
 * length (number of elements)
 * cap (sum of length and the length of the array beyond the slice)
 
-The builtin functions `len` and `cap` can be used to inspect the values.  The len and cap functions will both return 0 for a nil slice. 
+The builtin functions `len` and `cap` can be used to inspect the values.  The len and cap functions will both return 0 for a nil slice.
 
 ### Initialization with make
 
@@ -126,6 +126,18 @@ func main() {
 }
 ```
 
+The start and end indices of a slice expression are optional; they default to
+zero and the slice's length respectively. Hence you can write the following:
+
+```go
+    ...
+    a := []int{0, 1, 2, 3, 4, 5, 6, 7}
+    b := a[2:6]
+    c := a[4:]
+    d := a[:]
+    ...
+```
+
 ## Growing a slice
 
 Slices are dynamically sized, so how do we extend them? With the builtin `append` function.
@@ -177,7 +189,7 @@ A slices is a lightweight descriptor (implemented as struct), that contains:
 
 ![](https://blog.golang.org/go-slices-usage-and-internals_slice-struct.png)
 
-A variable created with 
+A variable created with
 
 ```go
 make([]byte, 5)
@@ -187,3 +199,15 @@ would look like this:
 
 ![](https://blog.golang.org/go-slices-usage-and-internals_slice-1.png)
 
+
+## Examples
+
+```
+$ go run slices3.go
+Expression                          |Value              |Nil?   |Type   |Length  |Capacity
+a := []int{0, 1, 2, 3, 4, 5, 6, 7}  |[0 1 2 3 4 5 6 7]  |false  |[]int  |8       |8
+b := a[2:6]                         |[2 3 4 5]          |false  |[]int  |4       |6
+c := a[4:]                          |[4 5 6 7]          |false  |[]int  |4       |4
+d := a[:]                           |[0 1 2 3 4 5 6 7]  |false  |[]int  |8       |8
+e := c[1:]                          |[5 6 7]            |false  |[]int  |3       |3
+```
