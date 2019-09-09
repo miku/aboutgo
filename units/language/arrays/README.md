@@ -24,3 +24,21 @@ func main() {
 }
 ```
 
+## Literal initialization
+
+Explicitly setting the size.
+
+```go
+b := [2]string{"Penn", "Teller"}
+```
+
+We can also let the compiler infer the size from the literal.
+
+```go
+b := [...]string{"Penn", "Teller"}
+```
+
+## Arrays and slices
+
+
+Instead of arrays, most programs will want arrays, that can grow in size. This is provided by slices.

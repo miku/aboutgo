@@ -63,7 +63,7 @@ A slice has two properties:
 * length (number of elements)
 * cap (sum of length and the length of the array beyond the slice)
 
-The builtin functions `len` and `cap` can be used to inspect the values.
+The builtin functions `len` and `cap` can be used to inspect the values.  The len and cap functions will both return 0 for a nil slice. 
 
 ### Initialization with make
 
@@ -95,7 +95,7 @@ func main() {
 // len=0, cap=0
 ```
 
-### Slicing
+## Slicing
 
 We can create a slice from an array. But we can also create a slice from
 another slice. We need to keep in mind, that the underlying array will be the
@@ -126,7 +126,7 @@ func main() {
 }
 ```
 
-### Extending a slice
+## Growing a slice
 
 Slices are dynamically sized, so how do we extend them? With the builtin `append` function.
 
@@ -143,7 +143,7 @@ require a larger underlying array?
 We would need to allocate a new array, copy over all existing elements and then
 insert the new one. This is exactly what `append` does.
 
-### Concatenating slices
+## Concatenating slices
 
 The `append` function allows to concatenate two slices as well.
 
@@ -162,3 +162,28 @@ func main() {
     // [a b c d e f]
 }
 ```
+
+## Slice internals
+
+Slices can be confusing at first.
+
+* [Go Slices: usage and internals](https://blog.golang.org/go-slices-usage-and-internals)
+
+A slices is a lightweight descriptor (implemented as struct), that contains:
+
+* a pointer to an array
+* length of a segment
+* capacity, which is maximum length of the segment
+
+![](https://blog.golang.org/go-slices-usage-and-internals_slice-struct.png)
+
+A variable created with 
+
+```go
+make([]byte, 5)
+```
+
+would look like this:
+
+![](https://blog.golang.org/go-slices-usage-and-internals_slice-1.png)
+
