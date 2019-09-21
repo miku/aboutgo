@@ -1,9 +1,11 @@
-# A Three-Day Go Course
+# An introductory Go Course
 
 Introduces the language proper, concurrency, tooling, working with data,
 important standard library packages and building services.
 
-* TODO: work out and link to units
+# TODO
+
+* [ ] work out and link to units
 
 # Overview
 
@@ -13,14 +15,14 @@ important standard library packages and building services.
 * A first Go program [misc/helloworld](../../units/misc/helloworld)
 * Editors [misc/editors](../../units/misc/editors)
 
-# Language
+# Writing Go
 
 * Package declaration
 * Import statement
 * File encoding
 * Entry point
 
-Core language elements.
+# Core language
 
 * Variables
 * Constants
