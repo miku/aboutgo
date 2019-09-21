@@ -120,3 +120,10 @@ $ go run main.go
 main.go:6:2: use of internal package perkeep.org/internal/azure/storage not allowed
 ```
 
+One motivation for internal packages from the [design document](https://docs.google.com/document/d/1e8kOo3r51b2BWtTs_1uADIA5djfXhPT36s6eHVRIvaU):
+
+> There is unexported code duplicated in the standard library because sharing it
+> would have required exporting those functions: net/http and net/http/httputil
+> share a few parsing functions, and there are four ‘func itoa’ in various
+> packages. Similarly, cmd/nm and cmd/objdump contain the same file reading
+> code.
