@@ -17,7 +17,7 @@ important standard library packages and building services.
 
 # Writing Go
 
-* Package declaration
+* Packages [../../units/language/packages]
 * Import statement
 * File encoding
 * Entry point
