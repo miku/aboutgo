@@ -14,7 +14,7 @@ Announcements, tutorial, community are made available in a blog:
 
 * [blog](https://blog.golang.org/)
 
-You may visit the documentation about Effective Go to revisit concepts or resolve questions:
+You may visit the documentation about *Effective Go* to revisit concepts or resolve questions:
 
 * [Effective Go](https://golang.org/doc/effective_go.html)
 
