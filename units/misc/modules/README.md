@@ -44,3 +44,16 @@ the go.mod to a package's directory together determine a package's import path.
 
 More on `go.mod` in the [wiki](https://github.com/golang/go/wiki/Modules#gomod).
 
+## The go.sum file
+
+The go.sum contains checksums to verify code equality. Nothing gets deleted from
+this file, it only grows.
+
+## Integration with the go tool
+
+The `go` tool is aware of modules. It looks at the `go.mod` file and it's local
+package cache to determine, whether all dependencies are available. There is no
+extra step to run, just run `go run` or `go test` as you would usually would.
+
+The module cache is located under `$GOPATH/pkg/mod`, but that is an
+implementation detail.
