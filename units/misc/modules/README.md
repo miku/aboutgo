@@ -44,6 +44,11 @@ the go.mod to a package's directory together determine a package's import path.
 
 More on `go.mod` in the [wiki](https://github.com/golang/go/wiki/Modules#gomod).
 
+> Each dependency requirement is written as a module path and a specific
+> semantic version.
+
+A comment can indicate, whether a dependency is not used by module directly.
+
 ## The go.sum file
 
 The go.sum contains checksums to verify code equality. Nothing gets deleted from
@@ -73,4 +78,3 @@ extra step to run, just run `go run` or `go test` as you would usually would.
 
 The module cache is located under `$GOPATH/pkg/mod`, but that is an
 implementation detail.
-
