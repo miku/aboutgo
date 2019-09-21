@@ -19,8 +19,8 @@ important standard library packages and building services.
 
 * Packages [../../units/language/packages]
 * Import statement [../../units/language/import]
-* File encoding
-* Entry point
+* File encoding [../../units/misc/fileencoding]
+* Entry point and execution model []
 
 # Core language
 
