@@ -49,6 +49,18 @@ More on `go.mod` in the [wiki](https://github.com/golang/go/wiki/Modules#gomod).
 The go.sum contains checksums to verify code equality. Nothing gets deleted from
 this file, it only grows.
 
+## Creating a go.mod file
+
+```
+$ go mod init
+```
+
+> Init initializes and writes a new go.mod to the current directory, in effect
+creating a new module rooted at the current directory. The file go.mod must not
+already exist. If possible, init will guess the module path from import comments
+(see 'go help importpath') or from version control configuration. To override
+this guess, supply the module path as an argument.
+
 ## Integration with the go tool
 
 The `go` tool is aware of modules. It looks at the `go.mod` file and it's local
@@ -57,3 +69,4 @@ extra step to run, just run `go run` or `go test` as you would usually would.
 
 The module cache is located under `$GOPATH/pkg/mod`, but that is an
 implementation detail.
+
