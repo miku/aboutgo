@@ -32,7 +32,7 @@ You may visit the documentation about *Effective Go* to revisit concepts or reso
 > has unusual properties that make effective Go programs different in character
 > from programs written in its relatives. A straightforward translation of a C++
 > or Java program into Go is unlikely to produce a satisfactory result—Java
-> programs are written in Java, not Go. 
+> programs are written in Java, not Go.
 
 ## Community and projects
 
