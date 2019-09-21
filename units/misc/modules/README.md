@@ -61,6 +61,10 @@ already exist. If possible, init will guess the module path from import comments
 (see 'go help importpath') or from version control configuration. To override
 this guess, supply the module path as an argument.
 
+Example workflow:
+
+* create a repository on github.com, clone, then run `go mod init`
+
 ## Integration with the go tool
 
 The `go` tool is aware of modules. It looks at the `go.mod` file and it's local
