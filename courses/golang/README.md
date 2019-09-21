@@ -39,7 +39,7 @@ important standard library packages and building services.
 
 # Everyday Go
 
-* Structuring Go projects
+* Structuring Go projects [../../units/everyday/layout]
 * What is GOPATH?
 * Importing code
 * Modules
