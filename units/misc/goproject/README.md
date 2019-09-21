@@ -6,6 +6,16 @@ Website of the language:
 
 * https://golang.org/
 
+Download latest version from:
+
+* [golang.org/dl](https://golang.org/dl/)
+
+Example upgrade path on Linux: Remove previous installation, download, untar.
+
+Read the release notes at:
+
+* [Release Notes](https://golang.org/doc/devel/release.html)
+
 The language specification:
 
 * [ref/spec](https://golang.org/ref/spec)
