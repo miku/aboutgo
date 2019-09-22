@@ -55,3 +55,6 @@ Value boundaries apply; overflows prevent compilation.
 constant 1267650600228229401496703205376 overflows int
 ```
 
+A type can be explicitly set for a constant.
+
+* [https://play.golang.org/p/0ElUyCZKsdx](https://play.golang.org/p/0ElUyCZKsdx)
