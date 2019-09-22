@@ -29,6 +29,11 @@ type Thing struct {
 	Value int
 }
 
+type Complex struct {
+	S string
+	M map[string]string
+}
+
 func main() {
 	a, b := Thing{1}, Thing{1}
 	fmt.Println(a == b)   // true
@@ -38,7 +43,10 @@ func main() {
 	a, b = Thing{1}, Thing{2}
 	fmt.Println(a == b) // false
 
+	c, d := Complex{}, Complex{}
+	fmt.Println(c == d) // invalid operation: c == d (struct containing map[string]string cannot be compared)
 }
 ```
 
-* [https://play.golang.org/p/fsZ9_O6cG-F](https://play.golang.org/p/fsZ9_O6cG-F)
+* [https://play.golang.org/p/bX9rzmF5Tdz](https://play.golang.org/p/bX9rzmF5Tdz)
+* [How to compare struct, slice, map are equal?](https://stackoverflow.com/questions/24534072/how-to-compare-struct-slice-map-are-equal)
