@@ -14,7 +14,7 @@ logical operators are `!`, `||` and `&&`.
 
 > https://golang.org/ref/spec#Type_identity
 
-## Struct Identity
+## Value Identity
 
 Can structs be compared? Yes, up to a certain point.
 
