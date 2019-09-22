@@ -95,7 +95,7 @@ doubt, omitted.
 
 ## Links
 
-https://golang.org/doc/effective_go.html#functions
+* [https://golang.org/doc/effective_go.html#functions](https://golang.org/doc/effective_go.html#functions)
 
 ## Code Review
 
@@ -106,7 +106,7 @@ https://golang.org/doc/effective_go.html#functions
 
 ## Advanced Code Review
 
-[Recover panics](advanced/example1/example1.go) ([Go Playground](https://play.golang.org/p/Wcd3CLbQZBH))
+* [Recover panics](advanced/example1/example1.go) ([Go Playground](https://play.golang.org/p/Wcd3CLbQZBH))
 
 ## Exercises
 
