@@ -9,18 +9,18 @@ important standard library packages and building services.
 
 # Overview
 
-* Where does Go come from? [misc/history](../../units/misc/history)
-* The Go project site and documents [misc/goproject](../../units/misc/goproject)
-* Installation and setup [misc/install](../../units/misc/install)
-* A first Go program [misc/helloworld](../../units/misc/helloworld)
-* Editors [misc/editors](../../units/misc/editors)
+* Where does Go come from? [misc/history](../../topics/misc/history)
+* The Go project site and documents [misc/goproject](../../topics/misc/goproject)
+* Installation and setup [misc/install](../../topics/misc/install)
+* A first Go program [misc/helloworld](../../topics/misc/helloworld)
+* Editors [misc/editors](../../topics/misc/editors)
 
 # Writing Go
 
-* Packages [../../units/language/packages]
-* Import statement [../../units/language/import]
-* File encoding [../../units/misc/fileencoding]
-* Entry point and execution model [../../units/misc/execution]
+* Packages [../../topics/language/packages]
+* Import statement [../../topics/language/import]
+* File encoding [../../topics/misc/fileencoding]
+* Entry point and execution model [../../topics/misc/execution]
 
 # Core language
 
@@ -39,7 +39,7 @@ important standard library packages and building services.
 
 # Everyday Go
 
-* Structuring Go projects [../../units/everyday/layout]
+* Structuring Go projects [../../topics/everyday/layout]
 * What is GOPATH?
 * Importing code
 * Modules
@@ -56,7 +56,7 @@ important standard library packages and building services.
 
 # Tooling
 
-* The go tool [tooling/go](../../units/tooling/go)
+* The go tool [tooling/go](../../topics/tooling/go)
 * Formatting and imports
 * Linters and helpers
 
