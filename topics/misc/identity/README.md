@@ -31,10 +31,14 @@ type Thing struct {
 
 func main() {
 	a, b := Thing{1}, Thing{1}
-	fmt.Println(a == b)
-	fmt.Println(&a == &b)
-	fmt.Println(&a == &a)
+	fmt.Println(a == b)   // true
+	fmt.Println(&a == &b) // false
+	fmt.Println(&a == &a) // true
+
+	a, b = Thing{1}, Thing{2}
+	fmt.Println(a == b) // false
+
 }
 ```
 
-* [https://play.golang.org/p/OeImcKeWGPT](https://play.golang.org/p/OeImcKeWGPT)
+* [https://play.golang.org/p/fsZ9_O6cG-F](https://play.golang.org/p/fsZ9_O6cG-F)
