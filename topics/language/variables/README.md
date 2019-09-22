@@ -76,17 +76,17 @@ Note: An example for type without name would be an anonymous struct.
 
 Type can be roughly put into the following [groups](https://golang.org/ref/spec#Types):
 
-* Boolean types (bool)
-* Numeric types (byte, int, uint, int8, int16, ..., float32, float64)
-* String types (string)
-* Array types ([n]T)
-* Slices types ([]T)
-* Struct types (T struct)
-* Pointer types (*T)
-* Function types (func F())
-* Interface types (method set)
-* Map types (map[K]V)
-* Channel types (chan(T))
+* Boolean types &mdash; bool
+* Numeric types &mdash; byte, int, uint, int8, int16, ..., float32, float64
+* String types &mdash; string
+* Array types &mdash; [n]T
+* Slices types &mdash; []T
+* Struct types &mdash; T struct
+* Pointer types &mdash; *T
+* Function types &mdash; func F()
+* Interface types &mdash; method set
+* Map types &mdash; map[K]V
+* Channel types &mdash; chan(T)
 
 > The language predeclares certain type names.
 
