@@ -4,6 +4,22 @@
 > Constants can be character, string, boolean, or numeric values. Constants
 > cannot be declared using the := syntax.
 
+Constants are simple.
+
+> But in Go, a constant is just a simple, unchanging value, and from here on
+> we're talking only about Go. (https://blog.golang.org/constants)
+
+
+
+## Notes
+
+* Constants are not variables.
+* They exist only at compilation.
+* Untyped constants can be implicitly converted where typed constants and variables can't.
+* Think of untyped constants as having a Kind, not a Type.
+* Explicit and implicit conversions.
+
+
 ```go
 package main
 
@@ -58,3 +74,10 @@ constant 1267650600228229401496703205376 overflows int
 A type can be explicitly set for a constant.
 
 * [https://play.golang.org/p/0ElUyCZKsdx](https://play.golang.org/p/0ElUyCZKsdx)
+
+## More on constants
+
+* [ref/spec on constants](https://golang.org/ref/spec#Constants)
+* [ref/spec on constant expressions](https://golang.org/ref/spec#Constant_expressions)
+* [https://blog.golang.org/constants](https://blog.golang.org/constants)
+* [dotGo 2019 - Dave Cheney - Constant Time](https://www.youtube.com/watch?v=pN_lm6QqHcw)
