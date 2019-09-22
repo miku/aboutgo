@@ -120,3 +120,12 @@ Note that there are not classes, class definitions or objects.
 Emphasis is on data, e.g. using structs. Inheritance is possible, but a less
 central concept.
 
+## Zero Value
+
+There are not uninitialized variables in Go, every type has a zero value. You
+cannot distringuish between a variable declared `int` and a variable that is 0.
+This can occassionally lead to problems.
+
+One example would be a workaround, where you work with pointers (where the zero
+value is nil) - but that leads to other obstacles, as this [issue in the AWS
+SDK](https://github.com/aws/aws-sdk-go/issues/114) illustrates.
