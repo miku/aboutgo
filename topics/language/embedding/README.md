@@ -22,15 +22,15 @@ fields and methods can be directly accessed by references of the outer type.
 
 ## Links
 
-[Methods, Interfaces and Embedded Types in Go](https://www.ardanlabs.com/blog/2014/05/methods-interfaces-and-embedded-types.html) - William Kennedy
-[Embedding is not inheritance](https://rakyll.org/typesystem/) - JBD
+* [Methods, Interfaces and Embedded Types in Go](https://www.ardanlabs.com/blog/2014/05/methods-interfaces-and-embedded-types.html) - William Kennedy
+* [Embedding is not inheritance](https://rakyll.org/typesystem/) - JBD
 
 ## Code Review
 
-[Declaring Fields](example1/example1.go) ([Go Playground](https://play.golang.org/p/mT4iWg10YEp))
-[Embedding types](example2/example2.go) ([Go Playground](https://play.golang.org/p/avo8I21N-qq))
-[Embedded types and interfaces](example3/example3.go) ([Go Playground](https://play.golang.org/p/pdwB9dxD1MR))
-[Outer and inner type interface implementations](example4/example4.go) ([Go Playground](https://play.golang.org/p/soB4QujV4Sj))
+* [Declaring Fields](example1/example1.go) ([Go Playground](https://play.golang.org/p/mT4iWg10YEp))
+* [Embedding types](example2/example2.go) ([Go Playground](https://play.golang.org/p/avo8I21N-qq))
+* [Embedded types and interfaces](example3/example3.go) ([Go Playground](https://play.golang.org/p/pdwB9dxD1MR))
+* [Outer and inner type interface implementations](example4/example4.go) ([Go Playground](https://play.golang.org/p/soB4QujV4Sj))
 
 ## Exercises
 
@@ -38,8 +38,8 @@ fields and methods can be directly accessed by references of the outer type.
 
 Copy the code from the template. Add a new type CachingFeed which embeds Feed and overrides the Fetch method.
 
-[Template](exercises/template1/template1.go) ([Go Playground](https://play.golang.org/p/kdHgALCIPIs)) |
-[Answer](exercises/exercise1/exercise1.go) ([Go Playground](https://play.golang.org/p/FbvPJoQc4In))
+* [Template](exercises/template1/template1.go) ([Go Playground](https://play.golang.org/p/kdHgALCIPIs)) |
+* [Answer](exercises/exercise1/exercise1.go) ([Go Playground](https://play.golang.org/p/FbvPJoQc4In))
 
 ----
 

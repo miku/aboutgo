@@ -22,28 +22,28 @@ _"Design is the art of arranging code to work today, and be changeable forever."
 
 ## Links
 
-[Interfaces](https://golang.org/doc/effective_go.html#interfaces)    
-[The Laws of Reflection](https://blog.golang.org/laws-of-reflection) - Rob Pike    
-[Methods, Interfaces and Embedded Types in Go](https://www.ardanlabs.com/blog/2014/05/methods-interfaces-and-embedded-types.html) - William Kennedy    
-[Interface Pollution](https://medium.com/@rakyll/interface-pollution-in-go-7d58bccec275) - JBD    
-[Abstraction Considered Harmful](https://bravenewgeek.com/abstraction-considered-harmful/) - Tyler Treat    
-[Interface Values Are Valueless](https://www.ardanlabs.com/blog/2018/03/interface-values-are-valueless.html) - William Kennedy    
-[Interface Semantics](https://www.ardanlabs.com/blog/2017/07/interface-semantics.html) - William Kennedy    
+* [Interfaces](https://golang.org/doc/effective_go.html#interfaces)
+* [The Laws of Reflection](https://blog.golang.org/laws-of-reflection) - Rob Pike
+* [Methods, Interfaces and Embedded Types in Go](https://www.ardanlabs.com/blog/2014/05/methods-interfaces-and-embedded-types.html) - William Kennedy
+* [Interface Pollution](https://medium.com/@rakyll/interface-pollution-in-go-7d58bccec275) - JBD
+* [Abstraction Considered Harmful](https://bravenewgeek.com/abstraction-considered-harmful/) - Tyler Treat
+* [Interface Values Are Valueless](https://www.ardanlabs.com/blog/2018/03/interface-values-are-valueless.html) - William Kennedy
+* [Interface Semantics](https://www.ardanlabs.com/blog/2017/07/interface-semantics.html) - William Kennedy
 
 ## Code Review
 
-[Repetitive Code That Needs Polymorphism](example0/example0.go) ([Go Playground](https://play.golang.org/p/Txsuzcpdran))  
-[Polymorphism](example1/example1.go) ([Go Playground](https://play.golang.org/p/J7OWzPzV40w))  
-[Method Sets](example2/example2.go) ([Go Playground](https://play.golang.org/p/N50ocjUekf3))  
-[Address Of Value](example3/example3.go) ([Go Playground](https://play.golang.org/p/w981JSUcVZ2))  
-[Storage By Value](example4/example4.go) ([Go Playground](https://play.golang.org/p/6U232Ue_BY0))  
-[Type Assertions](example5/example5.go) ([Go Playground](https://play.golang.org/p/f47JMTj2eId))  
-[Conditional Type Assertions](example6/example6.go) ([Go Playground](https://play.golang.org/p/9fYc5RyyvVG))  
-[The Empty Interface and Type Switches](example7/example7.go) ([Go Playground](https://play.golang.org/p/iyDfKCIQ4S9))  
+* [Repetitive Code That Needs Polymorphism](example0/example0.go) ([Go Playground](https://play.golang.org/p/Txsuzcpdran))
+* [Polymorphism](example1/example1.go) ([Go Playground](https://play.golang.org/p/J7OWzPzV40w))
+* [Method Sets](example2/example2.go) ([Go Playground](https://play.golang.org/p/N50ocjUekf3))
+* [Address Of Value](example3/example3.go) ([Go Playground](https://play.golang.org/p/w981JSUcVZ2))
+* [Storage By Value](example4/example4.go) ([Go Playground](https://play.golang.org/p/6U232Ue_BY0))
+* [Type Assertions](example5/example5.go) ([Go Playground](https://play.golang.org/p/f47JMTj2eId))
+* [Conditional Type Assertions](example6/example6.go) ([Go Playground](https://play.golang.org/p/9fYc5RyyvVG))
+* [The Empty Interface and Type Switches](example7/example7.go) ([Go Playground](https://play.golang.org/p/iyDfKCIQ4S9))
 
 ## Advanced Code Review
 
-[Storing Values](advanced/example1/example1.go) ([Go Playground](https://play.golang.org/p/yDK5lUiPPHW))
+* [Storing Values](advanced/example1/example1.go) ([Go Playground](https://play.golang.org/p/yDK5lUiPPHW))
 
 ## Exercises
 
@@ -53,7 +53,7 @@ _"Design is the art of arranging code to work today, and be changeable forever."
 
 **Part B** Add a new function named sayHello that accepts a value of type speaker. Implement that function to call the speak method on the interface value. Then create new values of each type and use the function.
 
-[Template](exercises/template1/template1.go) ([Go Playground](https://play.golang.org/p/hfC2-yPI9y6)) |
-[Answer](exercises/exercise1/exercise1.go) ([Go Playground](https://play.golang.org/p/mN8Fitr8Wts))
+* [Template](exercises/template1/template1.go) ([Go Playground](https://play.golang.org/p/hfC2-yPI9y6)) |
+* [Answer](exercises/exercise1/exercise1.go) ([Go Playground](https://play.golang.org/p/mN8Fitr8Wts))
 ___
 All material is licensed under the [Apache License Version 2.0, January 2004](http://www.apache.org/licenses/LICENSE-2.0).

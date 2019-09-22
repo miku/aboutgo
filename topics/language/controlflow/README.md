@@ -29,7 +29,7 @@ Write a program that inspects a user's name and greets them in a certain way if
 they are on a list or in a different way if they are not. Also look at the
 user's age and tell them some special secret if they are old enough to know it.
 
-[Template](exercises/template1/template1.go) ([Go Playground](https://play.golang.org/p/MrBtCfvCqcW)) |
-[Answer](exercises/exercise1/exercise1.go) ([Go Playground](https://play.golang.org/p/Q9YIorV63_Z))
+* [Template](exercises/template1/template1.go) ([Go Playground](https://play.golang.org/p/MrBtCfvCqcW)) |
+* [Answer](exercises/exercise1/exercise1.go) ([Go Playground](https://play.golang.org/p/Q9YIorV63_Z))
 ___
 All material is licensed under the [Apache License Version 2.0, January 2004](http://www.apache.org/licenses/LICENSE-2.0).
