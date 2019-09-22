@@ -1,7 +1,12 @@
 # Type embedding
 
-Go does not strive for type hierarchies, but prefers composition and interfaces
+Go does not strive for type hierarchies, it prefers composition and interfaces
 for method dispatch.
+
+> Code reuse is not provided by type hierarchy but via composition. Language
+> ecosystems with classical inheritance is often suffering from excessive level
+> of indirection and premature abstractions based on inheritance which later
+> makes the code complicated and unmaintainable.
 
 The closest notion to inheritance in Go is type embedding.
 
