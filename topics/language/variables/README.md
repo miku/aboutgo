@@ -55,7 +55,7 @@ The type can be omitted in a *var* statement.
 var x = 123
 ```
 
-Here,
+The type of `x` will be an `int` in this case.
 
 ### Shorthand declaration
 
@@ -76,17 +76,17 @@ Note: An example for type without name would be an anonymous struct.
 
 Type can be roughly put into the following [groups](https://golang.org/ref/spec#Types):
 
-* Boolean types
-* Numeric types
-* String types
-* Array types
-* Slices types
-* Struct types
-* Pointer types
-* Function types
-* Interface types
-* Map types
-* Channel types
+* Boolean types (bool)
+* Numeric types (byte, int, uint, int8, int16, ..., float32, float64)
+* String types (string)
+* Array types ([n]T)
+* Slices types ([]T)
+* Struct types (T struct)
+* Pointer types (*T)
+* Function types (func F())
+* Interface types (method set)
+* Map types (map[K]V)
+* Channel types (chan(T))
 
 > The language predeclares certain type names.
 
