@@ -65,6 +65,8 @@ func main() {
 }
 ```
 
+* [https://play.golang.org/p/Pwd-3y35FCi](https://play.golang.org/p/Pwd-3y35FCi)
+
 Value boundaries apply; overflows prevent compilation.
 
 ```
