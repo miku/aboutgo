@@ -61,3 +61,12 @@ func (r *Response) Location() (*url.URL, error)
     Relative redirects are resolved relative to the Response's Request.
     ErrNoLocation is returned if no Location header is present.
 ```
+
+## A doc.go file
+
+If package documentation gets longer or does not fit into any particular file,
+it can by convention be separated into a `doc.go` file, which contains only the
+package name and documentation.
+
+* [src/fmt/doc.go](https://golang.org/src/fmt/doc.go)
+
