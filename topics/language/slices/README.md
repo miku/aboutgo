@@ -269,17 +269,17 @@ would look like this:
 
 ![](https://blog.golang.org/go-slices-usage-and-internals_slice-1.png)
 
-
-### Examples
+### Exercise
 
 ```
 $ go run examples11/main.go
 Expression                          |Value              |Nil?   |Type   |Length  |Capacity
-a := []int{0, 1, 2, 3, 4, 5, 6, 7}  |[0 1 2 3 4 5 6 7]  |false  |[]int  |8       |8
-b := a[2:6]                         |[2 3 4 5]          |false  |[]int  |4       |6
-c := a[4:]                          |[4 5 6 7]          |false  |[]int  |4       |4
-d := a[:]                           |[0 1 2 3 4 5 6 7]  |false  |[]int  |8       |8
-e := c[1:]                          |[5 6 7]            |false  |[]int  |3       |3
+a := []int{0, 1, 2, 3, 4, 5, 6, 7}  |[0 1 2 3 4 5 6 7]  |false  |[]int  |_       |_
+b := a[2:6]                         |[2 3 4 5]          |false  |[]int  |_       |_
+c := a[4:]                          |[4 5 6 7]          |false  |[]int  |_       |_
+d := a[:]                           |[0 1 2 3 4 5 6 7]  |false  |[]int  |_       |_
+e := c[1:]                          |[5 6 7]            |false  |[]int  |_       |_
 ```
+
 ___
 All material is licensed under the [Apache License Version 2.0, January 2004](http://www.apache.org/licenses/LICENSE-2.0).
