@@ -6,6 +6,7 @@ The Go tool allows to manage many phases of the development cycle, especially:
 * go fmt
 * go vet
 * go run
+* go test
 * go build
 
 ```
