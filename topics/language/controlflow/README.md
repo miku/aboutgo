@@ -17,9 +17,9 @@ There are no ternary operators.
 
 ## Code Review
 
-[if statements](example1/example1.go) ([Go Playground](https://play.golang.org/p/YuENxHd7llH))
-[switch statements](example2/example2.go) ([Go Playground](https://play.golang.org/p/Ixx0rjkZFdp))
-[variable names](example3/example3.go) ([Go Playground](https://play.golang.org/p/KME1LmWQ4NM))
+* [if statements](example1/example1.go) ([Go Playground](https://play.golang.org/p/YuENxHd7llH))
+* [switch statements](example2/example2.go) ([Go Playground](https://play.golang.org/p/Ixx0rjkZFdp))
+* [variable names](example3/example3.go) ([Go Playground](https://play.golang.org/p/KME1LmWQ4NM))
 
 ## Exercises
 
