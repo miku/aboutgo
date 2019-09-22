@@ -136,7 +136,7 @@ func main() {
 // len=0, cap=0
 ```
 
-## Slicing
+### Slicing
 
 We can create a slice from an array. But we can also create a slice from
 another slice. We need to keep in mind, that the underlying array will be the
@@ -179,7 +179,7 @@ zero and the slice's length respectively. Hence you can write the following:
     ...
 ```
 
-## Growing a slice
+### Growing a slice
 
 Slices are dynamically sized, so how do we extend them? With the builtin `append` function.
 
@@ -196,7 +196,7 @@ require a larger underlying array?
 We would need to allocate a new array, copy over all existing elements and then
 insert the new one. This is exactly what `append` does.
 
-## Concatenating slices
+### Concatenating slices
 
 The `append` function allows to concatenate two slices as well.
 
@@ -215,8 +215,37 @@ func main() {
     // [a b c d e f]
 }
 ```
+### Copying a slice
 
-## Slice internals
+There is a builtin `copy` function.
+
+* [https://golang.org/pkg/builtin/#copy](https://golang.org/pkg/builtin/#copy)
+
+> The copy built-in function copies elements from a source slice into a
+> destination slice. (As a special case, it also will copy bytes from a string
+> to a slice of bytes.) The source and destination may overlap. Copy returns the
+> number of elements copied, which will be the minimum of len(src) and len(dst).
+
+### How to empty a slice?
+
+* You can set the slice variable to `nil`, which will hand over the slice to the GC
+* Set the len back to 0, but keep the allocated memory.
+
+```go
+a := []string{"A", "B", "C", "D", "E"}
+a = a[:0]
+fmt.Println(a, len(a), cap(a)) // [] 0 5
+```
+
+However, the data is not zeroed or deleted. It is still there.
+
+```
+fmt.Println(a[:2]) // [A B]
+```
+
+* [https://play.golang.org/p/pYTiwwhBWhp](https://play.golang.org/p/pYTiwwhBWhp)
+
+### Slice internals
 
 Slices can be confusing at first.
 
@@ -241,10 +270,10 @@ would look like this:
 ![](https://blog.golang.org/go-slices-usage-and-internals_slice-1.png)
 
 
-## Examples
+### Examples
 
 ```
-$ go run slices3.go
+$ go run examples11/main.go
 Expression                          |Value              |Nil?   |Type   |Length  |Capacity
 a := []int{0, 1, 2, 3, 4, 5, 6, 7}  |[0 1 2 3 4 5 6 7]  |false  |[]int  |8       |8
 b := a[2:6]                         |[2 3 4 5]          |false  |[]int  |4       |6
