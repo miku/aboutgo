@@ -3,8 +3,6 @@
 > A variable is a storage location for holding a value. The set of permissible
 > values is determined by the variable's type.
 
-Every value in Go has
-
 ## Variable declaration
 
 There are four variants to introduce a variable into a program.
