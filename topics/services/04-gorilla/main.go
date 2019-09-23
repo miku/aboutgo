@@ -18,9 +18,10 @@ func Echo(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 
-	// Uses the http.DefaultServeMux to dispatch handlers.
-	http.HandleFunc("/", Index)
-	http.HandleFunc("/echo", Echo)
+	r := mux.NewRouter()
+	r.HandleFunc("/", Index)
+	r.HandleFunc("/echo", Echo)
+	http.Handle("/", r)
 
 	// Start a server listening on port 8000 and responding using Echo.
 	if err := http.ListenAndServe("localhost:8000", nil); err != nil {
