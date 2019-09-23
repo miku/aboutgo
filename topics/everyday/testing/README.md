@@ -25,3 +25,45 @@ case letter) and should have the signature,
 > A benchmark function is one named `BenchmarkXxx` and should have the signature,
 
     func BenchmarkXxx(b *testing.B) { ... }
+
+The [`testing.T`](https://golang.org/pkg/testing/#T) and
+[`testing.B`](https://golang.org/pkg/testing/#B) types allow to signal failure
+and logging.
+
+## Table driven tests
+
+Go has a preference for table driven tests, utilizing anonymous structs.
+
+* [wiki/TableDrivenTests](https://github.com/golang/go/wiki/TableDrivenTests)
+
+```go
+var flagtests = []struct {
+	in  string
+	out string
+}{
+	{"%a", "[%a]"},
+	{"%-a", "[%-a]"},
+	{"%+a", "[%+a]"},
+	{"%#a", "[%#a]"},
+	{"% a", "[% a]"},
+	{"%0a", "[%0a]"},
+	{"%1.2a", "[%1.2a]"},
+	{"%-1.2a", "[%-1.2a]"},
+	{"%+1.2a", "[%+1.2a]"},
+	{"%-+1.2a", "[%+-1.2a]"},
+	{"%-+1.2abc", "[%+-1.2a]bc"},
+	{"%-1.2abc", "[%-1.2a]bc"},
+}
+func TestFlagParser(t *testing.T) {
+	var flagprinter flagPrinter
+	for _, tt := range flagtests {
+		t.Run(tt.in, func(t *testing.T) {
+			s := Sprintf(tt.in, &flagprinter)
+			if s != tt.out {
+				t.Errorf("got %q, want %q", s, tt.out)
+			}
+		})
+	}
+}
+```
+
