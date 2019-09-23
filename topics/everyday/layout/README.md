@@ -105,7 +105,14 @@ Example for a small tool with a couple of tests (excerpt).
 * code and test code side by side
 * documentation in docs
 * commands id `cmd/`
-*
+
+Think of the user, if your write library code. How would a user import your code?
+
+Some projects include Makefiles, although the Go tool should take care of most
+tasks, that Makefile solve. However, Makefiles can be useful, too:
+
+* include additional tasks, not related to Go
+* single entry point for your project, which allows to simplify building: clone, make, done.
 
 ```
 $ tree -d -I vendor
@@ -174,12 +181,7 @@ $ tree -d -I vendor
 63 directories
 ```
 
-## Services
-
-
-
 ## Links
-
 
 * https://talks.golang.org/2014/names.slide
 * https://golang.org/doc/effective_go.html#names
