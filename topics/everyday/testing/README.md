@@ -1,6 +1,12 @@
 # Testing Go Code
 
-Here, we focus on unit tests.
+Here, we focus on unit tests. Go provides a basic testing framework out of the box. It lacks features, for example assertions - which is partly explained [in the FAQ](https://golang.org/doc/faq#testing_framework):
+
+> Go's standard testing package makes it easy to write unit tests, but it lacks
+> features provided in other language's testing frameworks such as assertion
+> functions.
+
+## File naming convention
 
 If you have a file `readerutil.go`, put tests into `readerutil_test.go`. The `go
 test` command will find these files automatically.
@@ -13,7 +19,6 @@ Test files can contain:
 * Test functions
 * Benchmark functions
 * Example functions
-
 
 ## Function names
 
