@@ -7,6 +7,11 @@ The standard library package is an abstract, the adapters for database engines a
 
 * [wiki/SQLDrivers](https://github.com/golang/go/wiki/SQLDrivers)
 
+Two popular examples:
+
+* [github.com/go-sql-driver/mysql](https://github.com/go-sql-driver/mysql)
+* [github.com/mattn/go-sqlite3](https://github.com/mattn/go-sqlite3)
+
 >  The sql.DB abstraction is designed to keep you from worrying about how to
 >  manage concurrent access to the underlying datastore.
 
@@ -102,4 +107,24 @@ Insertion and query example.
             log.Fatal(err)
         }
     }
+```
+
+Transaction example.
+
+```sql
+deleteStmt, err := database.Prepare("update task set is_deleted='Y',last_modified_at=datetime() where id=?")
+if err != nil {
+    fmt.Println(err)
+}
+tx, err := database.Begin()
+if err != nil {
+    fmt.Println(err)
+}
+_, err = tx.Stmt(deleteStmt).Exec(id)
+if err != nil {
+    fmt.Println("doing rollback")
+    tx.Rollback()
+} else {
+    tx.Commit()
+}
 ```
