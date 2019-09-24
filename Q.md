@@ -49,3 +49,9 @@ writing Go.
 > Again, the whole concept of heap is not part of the Go
 language. -- [https://groups.google.com/d/msg/golang-nuts/kWXYU95XN04/vthkrDeId2cJ](https://groups.google.com/d/msg/golang-nuts/kWXYU95XN04/vthkrDeId2cJ)
 
+## How to get the size of an value?
+
+There is Sizeof function in the unsafe package.
+
+* [playground](https://play.golang.org/p/pg6vJSYMqVd)
+
