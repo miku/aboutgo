@@ -8,6 +8,8 @@ There are various tools with a varying degree of coverage of code issues.
 The `golangci-lint` linter is a meta-linter, combining many other tools under one umbrella.
 
 ```
+$ go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
+
 $ golangci-lint help linters
 Enabled by default linters:
 deadcode: Finds unused code [fast: true, auto-fix: false] ...
