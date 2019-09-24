@@ -74,7 +74,6 @@ important standard library packages and building services.
 * io [packages/context](../../topics/packages/io)
 * logging [packages/context](../../topics/packages/logging)
 
-
 # Working with Data
 
 * Working with files [data/files](../../topics/data/files)
@@ -94,10 +93,6 @@ important standard library packages and building services.
 * Writing HTTP handlers [services/handlers](../../topics/services/handlers)
 * Structuring basic HTTP services [services/layout](../../topics/services/layout)
 * Routing with gorilla/mux [services/mux](../../topics/services/mux)
-
-
-# Exercises and projects
-
 
 # Going Forward
 
