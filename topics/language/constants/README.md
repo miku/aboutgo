@@ -77,6 +77,12 @@ A type can be explicitly set for a constant.
 
 * [https://play.golang.org/p/0ElUyCZKsdx](https://play.golang.org/p/0ElUyCZKsdx)
 
+## Core Review
+
+* [Example 1](example1/main.go)
+* [Example 2](example2/main.go)
+* [Example 3](example3/main.go)
+
 ## More on constants
 
 * [ref/spec on constants](https://golang.org/ref/spec#Constants)
