@@ -28,3 +28,11 @@ the standard library that contains functions to manipulate errors.
 More examples can be found at the [errors package
 examples](https://golang.org/pkg/errors/).
 
+
+## Custom errors
+
+Via [errors.New](https://golang.org/pkg/errors/#New).
+
+## Code Review
+
+* [Example 1](example1/main.go)
