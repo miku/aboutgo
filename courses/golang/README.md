@@ -86,6 +86,10 @@ important standard library packages and building services.
 * Structuring basic HTTP services [services/layout](../../topics/services/layout)
 * Routing with gorilla/mux [services/mux](../../topics/services/mux)
 
+
+# Exercises and projects
+
+
 # Going Forward
 
 * Tips for writing idiomatic Go [misc/idioms](../../topics/misc/idioms)
