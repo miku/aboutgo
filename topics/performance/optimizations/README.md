@@ -56,3 +56,12 @@ b.WriteString(" ")
 b.WriteString(time.Now().String())
 r = b.String()
 ```
+
+### Parallelize
+
+If the problem is parallelizable, it might be worth the effort to improve performance.
+
+Example for a generic [parallel line processor](https://github.com/miku/parallel).
+
+When using goroutines, consider batching data - otherwise the communication
+overhead might exceed the benefits.
