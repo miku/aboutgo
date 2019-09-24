@@ -49,16 +49,3 @@ will be visible only within the package (which might contain multiple files).
 * [Unexported struct type fields - Main](example4/example4.go) ([Go Playground](https://play.golang.org/p/6MznWaiGwr-))
 * [Unexported embedded types - Pkg](example5/users/users.go) ([Go Playground](https://play.golang.org/p/br-2rVc1VF1))
 * [Unexported embedded types - Main](example5/example5.go) ([Go Playground](https://play.golang.org/p/p9pQo5gCB42))
-
-## Exercises
-
-### Exercise 1
-
-**Part A** Create a package named toy with a single exported struct type named Toy. Add the exported fields Name and Weight. Then add two unexported fields named onHand and sold. Declare a factory function called New to create values of type toy and accept parameters for the exported fields. Then declare methods that return and update values for the unexported fields.
-
-**Part B** Create a program that imports the toy package. Use the New function to create a value of type toy. Then use the methods to set the counts and display the field values of that toy value.
-
-* [Template](exercises/template1)
-* [Answer](exercises/exercise1)
-___
-All material is licensed under the [Apache License Version 2.0, January 2004](http://www.apache.org/licenses/LICENSE-2.0).

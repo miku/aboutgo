@@ -7,7 +7,7 @@ Slices are an incredibly important data structure in Go. They form the basis for
 * Slices are like dynamic arrays with special and built-in functionality.
 * There is a difference between a slices length and capacity and they each service a purpose.
 * Slices allow for multiple "views" of the same underlying array.
-* Slices can grow through the use of the built-in function append.
+* Slices can grow through the use of the built-in function [append](https://golang.org/pkg/builtin/#append).
 
 ## Links
 
@@ -269,7 +269,41 @@ would look like this:
 
 ![](https://blog.golang.org/go-slices-usage-and-internals_slice-1.png)
 
-### Exercise
+### Sidenote, new vs make
+
+Both [`new`](https://golang.org/doc/effective_go.html#allocation_new) and
+[`make`](https://golang.org/doc/effective_go.html#allocation_make) are builtin
+functions.
+
+> Go has two allocation primitives, the built-in functions new and make. They do
+different things and apply to different types, which can be confusing, but the
+rules are simple. Let's talk about new first. It's a built-in function that
+allocates memory, but unlike its namesakes in some other languages it does not
+initialize the memory, it only zeros it. That is, new(T) allocates zeroed
+storage for a new item of type T and returns its address, a value of type *T. In
+Go terminology, it returns a pointer to a newly allocated zero value of type T.
+
+> Since the memory returned by new is zeroed, it's helpful to arrange when
+> designing your data structures that the zero value of each type can be used
+> without further initialization. This means a user of the data structure can
+> create one with new and get right to work
+
+Go Proverb: Make the zero value useful.
+
+> The built-in function make(T, args) serves a purpose
+> different from new(T). It creates slices, maps, and channels only, and it
+> returns an initialized (not zeroed) value of type T (not *T).
+
+> The make() function, on the other hand, is a special built-in function that is
+> used to initialize **slices**, **maps**, and **channels**. Note that make()
+> can only be used to initialize slices, maps, and channels, and that, unlike
+> the new() function, make() does not return a pointer.
+
+
+
+### Exercises
+
+* Try to fill out the values for Length and Capacity in the following table.
 
 ```
 $ go run examples11/main.go
@@ -280,6 +314,7 @@ c := a[4:]                          |[4 5 6 7]          |false  |[]int  |_      
 d := a[:]                           |[0 1 2 3 4 5 6 7]  |false  |[]int  |_       |_
 e := c[1:]                          |[5 6 7]            |false  |[]int  |_       |_
 ```
+
 
 ___
 All material is licensed under the [Apache License Version 2.0, January 2004](http://www.apache.org/licenses/LICENSE-2.0).
