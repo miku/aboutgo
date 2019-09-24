@@ -78,3 +78,8 @@ extra step to run, just run `go run` or `go test` as you would usually would.
 
 The module cache is located under `$GOPATH/pkg/mod`, but that is an
 implementation detail.
+
+
+> When using modules, GOPATH is no longer used for resolving imports. However,
+> it is still used to store downloaded source code (in GOPATH/pkg/mod) and
+> compiled commands (in GOPATH/bin). (https://golang.org/cmd/go/#hdr-GOPATH_and_Modules)
