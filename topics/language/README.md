@@ -11,6 +11,7 @@ The key data structures are provided by the language proper.
 * [Pointers](pointers)
 * [Constants](constants)
 * [Functions](functions)
+* [Control Flow](controlflow)
 
 ## Data structures
 
