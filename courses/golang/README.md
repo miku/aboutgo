@@ -30,7 +30,7 @@ important standard library packages and building services.
 * Arrays [language/arrays](../../topics/language/arrays)
 * Slices [language/slices](../../topics/language/slices)
 * Functions [language/functions](../../topics/language/functions)
-* Control Flow [language/flow](../../topics/language/controlflow)
+* Control Flow [language/controlflow](../../topics/language/controlflow)
 * Structs [language/structs](../../topics/language/structs)
 * Methods [language/methods](../../topics/language/methods)
 * Pointers [language/pointer](../../topics/language/pointers)
