@@ -9,17 +9,17 @@ package main
 
 // Add imports.
 
-// Declare a struct that represents a ball player.
-// Include fields called name, atBats and hits.
+// Declare a struct that represents a person.
+// Include fields called name, weight and height.
 
-// Declare a method that calculates the batting average for a player.
-func ( /* receiver */ ) average() /* return type */ {
+// Declare a method that calculates the BMI a person.
+func ( /* receiver */ ) bmi() /* return type */ {
 }
 
 func main() {
 
-	// Create a slice of players and populate each player
+	// Create a slice of persons and populate each person
 	// with field values.
 
-	// Display the batting average for each player in the slice.
+	// Display the bmi average for each player in the slice.
 }

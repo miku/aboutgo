@@ -9,38 +9,34 @@ package main
 
 import "fmt"
 
-// player represents a person in the game.
-type player struct {
+// person represents a person.
+type person struct {
 	name   string
-	atBats int
-	hits   int
+	weight int     // kg
+	height float64 // meter
 }
 
-// average calculates the batting average for a player.
-func (p *player) average() float64 {
-	if p.atBats == 0 {
-		return 0.0
-	}
-
-	return float64(p.hits) / float64(p.atBats)
+// bmi calculates the body mass index of player.
+func (p *person) bmi() float64 {
+	return float64(p.weight) / (p.height * p.height)
 }
 
 func main() {
 
 	// Create a few players.
-	ps := []player{
-		{"bill", 10, 7},
-		{"jim", 12, 6},
-		{"ed", 6, 4},
+	ps := []person{
+		{"ada", 79, 1.80},
+		{"bob", 150, 2.0},
+		{"dan", 55, 1.65},
 	}
 
 	// Display the batting average for each player.
 	for i := range ps {
-		fmt.Printf("%s: AVG[.%.f]\n", ps[i].name, ps[i].average()*1000)
+		fmt.Printf("%s: bmi=%2.2f\n", ps[i].name, ps[i].bmi())
 	}
 
 	// Why did I not choose this form?
 	for _, p := range ps {
-		fmt.Printf("%s: AVG[.%.f]\n", p.name, p.average()*1000)
+		fmt.Printf("%s: bmi=%2.2f\n", p.name, p.bmi())
 	}
 }
