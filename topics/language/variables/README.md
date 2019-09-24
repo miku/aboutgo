@@ -3,6 +3,8 @@
 > A variable is a storage location for holding a value. The set of permissible
 > values is determined by the variable's type.
 
+Go is mostly statically typed (interfaces can accomodate multiple types).
+
 ## Variable declaration
 
 There are four variants to introduce a variable into a program.
@@ -127,3 +129,7 @@ This can occassionally lead to problems.
 One example would be a workaround, where you work with pointers (where the zero
 value is nil) - but that leads to other obstacles, as this [issue in the AWS
 SDK](https://github.com/aws/aws-sdk-go/issues/114) illustrates.
+
+## Code Review
+
+* [Variables](example1/main.go)
