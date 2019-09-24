@@ -16,12 +16,11 @@ func main() {
 
 // stackCopy recursively runs increasing the size
 // of the stack.
-//go:noinline
 func stackCopy(s *string, c int, a [size]int) {
 	println(c, s, *s)
 
 	c++
-	if c == 10 {
+	if c == 100000 {
 		return
 	}
 

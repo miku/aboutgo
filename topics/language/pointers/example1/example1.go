@@ -20,7 +20,6 @@ func main() {
 
 // increment declares count as a pointer variable whose value is
 // always an address and points to values of type int.
-//go:noinline
 func increment(inc int) {
 
 	// Increment the "value of" inc.
