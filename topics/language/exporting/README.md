@@ -41,16 +41,12 @@ will be visible only within the package (which might contain multiple files).
 
 * [Declare and access exported identifiers - Pkg](example1/counters/counters.go) ([Go Playground](https://play.golang.org/p/8Xzq-m9ez-I))
 * [Declare and access exported identifiers - Main](example1/example1.go) ([Go Playground](https://play.golang.org/p/KrpX0CyIyYO))
-
 * [Declare unexported identifiers and restrictions - Pkg](example2/counters/counters.go) ([Go Playground](https://play.golang.org/p/9u1IQexx5gk))
 * [Declare unexported identifiers and restrictions - Main](example2/example2.go) ([Go Playground](https://play.golang.org/p/A5FpmRpuOWJ))
-
 * [Access values of unexported identifiers - Pkg](example3/counters/counters.go) ([Go Playground](https://play.golang.org/p/NroO30yoNvh))
 * [Access values of unexported identifiers - Main](example3/example3.go) ([Go Playground](https://play.golang.org/p/e5fg0uOEkkn))
-
 * [Unexported struct type fields - Pkg](example4/users/users.go) ([Go Playground](https://play.golang.org/p/KQ6x5z7E1pN))
 * [Unexported struct type fields - Main](example4/example4.go) ([Go Playground](https://play.golang.org/p/6MznWaiGwr-))
-
 * [Unexported embedded types - Pkg](example5/users/users.go) ([Go Playground](https://play.golang.org/p/br-2rVc1VF1))
 * [Unexported embedded types - Main](example5/example5.go) ([Go Playground](https://play.golang.org/p/p9pQo5gCB42))
 
