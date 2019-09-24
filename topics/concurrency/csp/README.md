@@ -5,7 +5,7 @@
 * Communicating Sequential Processes (Hoare, 1978)
 * Goroutines that communicate via channels
 * Emphasis on communication, a goroutine does not address a target, but uses a channel
-* Share Memory By Communicating
+* *Do not communicate by sharing memory; instead, share memory by communicating.*
 
 > One way to think about this model is to consider a typical single-threaded
 > program running on one CPU. It has no need for synchronization primitives. Now

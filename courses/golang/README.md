@@ -58,7 +58,6 @@ important standard library packages and building services.
 * Goroutines [concurrency/goroutines](../../topics/concurrency/goroutines)
 * Channels [concurrency/channels](../../topics/concurrency/channels)
 * The select statement [concurrency/select](../../topics/concurrency/select)
-* Patterns [concurrency/patterns](../../topics/concurrency/patterns)
 
 # Tooling
 
