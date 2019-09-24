@@ -25,7 +25,7 @@ important standard library packages and building services.
 # Core language
 
 * Variables [language/variables](../../topics/language/variables)
-* Constants [langauge/constants](../../topics/language/constants)
+* Constants [language/constants](../../topics/language/constants)
 * Exporting [language/exporting](../../topics/language/exporting)
 * Arrays [language/arrays](../../topics/language/arrays)
 * Slices [language/slices](../../topics/language/slices)
