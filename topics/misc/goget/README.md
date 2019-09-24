@@ -8,3 +8,7 @@ The `go` command can fetch Go projects from the web.
 The semantic of `go get` depends on where the command is run. If it's run outside of a project with a go module, it behaves as describe in [Legacy GOPATH go get](https://golang.org/cmd/go/#hdr-Legacy_GOPATH_go_get).
 
 
+You can host code anywhere with a [few
+tricks](https://jve.linuxwall.info/blog/index.php?post/2015/08/26/Hosting_Go_code_on_Github_with_custom_import_path),
+but for the major hosting sites, [support is
+built-in](https://github.com/golang/tools/blob/c006dc79eb54fe1d2cfcfbe2cf24783e111c368a/go/vcs/vcs.go#L649-L691).

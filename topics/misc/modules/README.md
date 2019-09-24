@@ -83,3 +83,10 @@ implementation detail.
 > When using modules, GOPATH is no longer used for resolving imports. However,
 > it is still used to store downloaded source code (in GOPATH/pkg/mod) and
 > compiled commands (in GOPATH/bin). (https://golang.org/cmd/go/#hdr-GOPATH_and_Modules)
+
+## Migration
+
+Since Go 1.11, the Go community and projects are in a transistion process to Go modules.
+
+* [Using Go modules](https://blog.golang.org/using-go-modules)
+* [Migrating to Go modules](https://blog.golang.org/migrating-to-go-modules)
