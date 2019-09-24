@@ -53,3 +53,7 @@ if err != nil {
 }
 fmt.Printf("%v", ip)
 ```
+
+## Helper
+
+A tool like [JSONGen](https://github.com/bemasher/JSONGen) can help shorten the process from data to structs.
