@@ -134,3 +134,7 @@ SDK](https://github.com/aws/aws-sdk-go/issues/114) illustrates.
 
 * [Variables](example1/main.go)
 * [Type declaration](example2/main.go)
+
+## Exercises
+
+* [Template 1](template1/main.go), [Exercise 1](exercise1/main.go)
