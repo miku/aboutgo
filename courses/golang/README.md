@@ -51,6 +51,7 @@ important standard library packages and building services.
 * Benchmarking and Profiling [everyday/benchmarking](../../topics/everyday/benchmarking)
 * Standard Library overview [everyday/stdlib](../../topics/everyday/stdlib)
 * Finding and using third-party code [everyday/thirdparty](../../topics/everyday/thirdparty)
+* HTTP requests [everyday/requests](../../topics/everyday/requests)
 
 # Concurrency
 
@@ -65,6 +66,14 @@ important standard library packages and building services.
 * Cross-compilation [tooling/crosscompilation](../../topics/tooling/crosscompilation)
 * Formatting and imports [tooling/formatting](../../topics/tooling/formatting)
 * Linters and helpers [tooling/linters](../../topics/tooling/linters)
+
+# Packages
+
+* context [packages/context](../../topics/packages/context)
+* flag [packages/context](../../topics/packages/flag)
+* io [packages/context](../../topics/packages/io)
+* logging [packages/context](../../topics/packages/logging)
+
 
 # Working with Data
 
