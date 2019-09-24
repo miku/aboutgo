@@ -19,4 +19,11 @@ func main() {
 
 	// ./example3.go:18: cannot call pointer method on duration(42)
 	// ./example3.go:18: cannot take the address of duration(42)
+
+	// https://golang.org/ref/spec#Address_operators
+
+	// > The operand must be addressable, that is, either a variable, pointer
+	// indirection, or slice indexing operation; or a field selector of an
+	// addressable struct operand; or an array indexing operation of an
+	// addressable array.
 }

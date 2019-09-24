@@ -41,10 +41,6 @@ _"Design is the art of arranging code to work today, and be changeable forever."
 * [Conditional Type Assertions](example6/example6.go) ([Go Playground](https://play.golang.org/p/9fYc5RyyvVG))
 * [The Empty Interface and Type Switches](example7/example7.go) ([Go Playground](https://play.golang.org/p/iyDfKCIQ4S9))
 
-## Advanced Code Review
-
-* [Storing Values](advanced/example1/example1.go) ([Go Playground](https://play.golang.org/p/yDK5lUiPPHW))
-
 ## Exercises
 
 ### Exercise 1

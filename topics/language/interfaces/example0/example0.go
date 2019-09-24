@@ -14,7 +14,7 @@ type file struct {
 // read implements the reader interface for a file.
 func (file) read(b []byte) (int, error) {
 	s := "<rss><channel><title>Going Go Programming</title></channel></rss>"
-	copy(b, s)
+	copy(b, s) // Special case of copying a string into a byte slice.
 	return len(s), nil
 }
 
