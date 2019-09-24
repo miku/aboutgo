@@ -89,9 +89,10 @@ However, the `$GOPATH` is [still relevant](https://github.com/golang/go/wiki/GOP
 
 Go into the `template` directory:
 
+```go
 // Exercise: Write a short command line program, that uses this function and
 // prints out a value, e.g. the result of Inc(10).
-
+```
 
 ## Internal packages
 
