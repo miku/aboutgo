@@ -17,3 +17,7 @@ If you start a new projects as of 2019, use Go modules.
 Further information on publishing packages can be found in the wiki:
 
 * [wiki/PackagePublishing](https://github.com/golang/go/wiki/PackagePublishing)
+
+A summary of the [background articles from Russ Cox](https://research.swtch.com/vgo) can be found here:
+
+* [miku/gomodintro](https://github.com/miku/gomodintro)
