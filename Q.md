@@ -55,3 +55,30 @@ There is Sizeof function in the unsafe package.
 
 * [playground](https://play.golang.org/p/pg6vJSYMqVd)
 
+## How are types compared?
+
+* Basic data types are always comparable using the == and != operators: integer
+values, floating-point numbers, complex numbers, boolean values, string values,
+constant values.
+
+* Array values are comparable, if they contain a comparable element type
+* Pointer values are comparable.
+* Channel values are comparable.
+* Interface values are comparable.
+* Comparing interface values works only if the dynamic type is comparable.
+* Function values, Slice values and Map values are not comparable, they can
+  only be compared with nil, as a special case.
+
+> Two struct values can be tested for equality by comparing the values of their
+> individual fields. In general, two struct values are considered equal if they
+> are of the same type and the their corresponding fields are equal.
+
+> Two pointer values are considered equal if they point to the same value in
+> memory (or if they are nil).
+
+> Two interface values are considered equal if their underlying concrete types
+> and their values are comparable and are equal or if both interfaces are nil.
+
+> Two channel values are considered equal if they originated from the same make call.
+
+
