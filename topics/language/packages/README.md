@@ -54,6 +54,10 @@ Another example for the `cmd` pattern is the Go language repository:
 
 * [cmd/go](https://github.com/golang/go/tree/master/src/cmd/go)
 
+A simple tool example:
+
+* [ubleipzig/solrdump](https://github.com/ubleipzig/solrdump)
+
 ## Historical note on GOPATH
 
 The GOPATH, by default `$HOME/go` organized third-party Go code (own and

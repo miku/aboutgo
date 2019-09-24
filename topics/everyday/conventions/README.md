@@ -31,6 +31,12 @@ func WriteString(w Writer, s string) (n int, err error) {
 }
 ```
 
+## Package names
+
+Try to use simple names.
+
+> A package names with under_scores, hy-phens or mixedCaps should be avoided.
+
 ## Keep an eye on your code
 
 The `go vet` tool is available out of the box.
