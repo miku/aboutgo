@@ -1,11 +1,7 @@
 # An introductory Go Course
 
 Introduces the language proper, concurrency, tooling, working with data,
-important standard library packages and building services.
-
-# TODO
-
-* [ ] work out and link to units
+important standard library packages and basic services.
 
 # Overview
 
