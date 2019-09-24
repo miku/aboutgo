@@ -85,6 +85,14 @@ of blog posts:
 
 However, the `$GOPATH` is [still relevant](https://github.com/golang/go/wiki/GOPATH), it is not not used for tracking dependencies anymore.
 
+## Exercise
+
+Go into the `template` directory:
+
+// Exercise: Write a short command line program, that uses this function and
+// prints out a value, e.g. the result of Inc(10).
+
+
 ## Internal packages
 
 Since Go 1.5, there is the mechanism to hide packages and restrict their importability - called internal packages.
