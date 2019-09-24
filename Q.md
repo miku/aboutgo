@@ -81,4 +81,8 @@ constant values.
 
 > Two channel values are considered equal if they originated from the same make call.
 
+More facilities for comparison:
 
+* [bytes.Equal](https://golang.org/pkg/bytes/#Equal)
+* [reflect.DeepEqual](https://golang.org/pkg/reflect/#DeepEqual)
+* [google/go-cmp](https://github.com/google/go-cmp)
