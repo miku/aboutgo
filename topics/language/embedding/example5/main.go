@@ -1,5 +1,7 @@
 package main
 
+// Example that embedding is not exactly inheritance.
+
 type Animal struct{}
 
 type Dog struct {

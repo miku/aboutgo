@@ -32,15 +32,6 @@ fields and methods can be directly accessed by references of the outer type.
 * [Embedded types and interfaces](example3/example3.go) ([Go Playground](https://play.golang.org/p/pdwB9dxD1MR))
 * [Outer and inner type interface implementations](example4/example4.go) ([Go Playground](https://play.golang.org/p/soB4QujV4Sj))
 
-## Exercises
-
-### Exercise 1
-
-Copy the code from the template. Add a new type CachingFeed which embeds Feed and overrides the Fetch method.
-
-* [Template](exercises/template1/template1.go) ([Go Playground](https://play.golang.org/p/kdHgALCIPIs)) |
-* [Answer](exercises/exercise1/exercise1.go) ([Go Playground](https://play.golang.org/p/FbvPJoQc4In))
-
 ----
 
 ## Combining interfaces
