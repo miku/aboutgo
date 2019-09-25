@@ -5,14 +5,16 @@ import (
 	"net/http"
 )
 
+type handler struct{}
+
+func (h *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Hello World!\n"))
+}
+
 func main() {
 
 	log.Println("http://localhost:8000")
-	// Start a server listening on port 8000 and responding using Echo.
-	http.ListenAndServe("localhost:8000",
-		http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-			w.Write([]byte("Hello World!\n"))
-		}),
-	)
+	http.ListenAndServe("localhost:8000", &handler{})
 
+	// ListenAndServer returns an error, which should be checked.
 }
