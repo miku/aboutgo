@@ -53,8 +53,8 @@ important standard library packages and basic services.
 
 * CSP [concurrency/csp](../../topics/concurrency/csp)
 * Goroutines [concurrency/goroutines](../../topics/concurrency/goroutines)
-* Channels [concurrency/channels](../../topics/concurrency/channels)
 * The select statement [concurrency/select](../../topics/concurrency/select)
+* Channels [concurrency/channels](../../topics/concurrency/channels)
 
 # Tooling
 
@@ -79,8 +79,7 @@ important standard library packages and basic services.
 
 # Working with Databases
 
-* The database/sql interface [db/sql](../../topics/db/sql)
-* General purpose extensions for database/sql [db/sqlx](../../topics/db/sqlx)
+* Working with Databases [databases](../../topics/database)
 
 # Services
 
