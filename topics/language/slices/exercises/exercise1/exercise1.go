@@ -21,6 +21,10 @@ func main() {
 		numbers = append(numbers, i*10)
 	}
 
+	// for i := range numbers {
+	// 	fmt.Println(i)
+	// }
+
 	// Display each value.
 	for _, number := range numbers {
 		fmt.Println(number)

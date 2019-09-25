@@ -16,26 +16,43 @@ type person struct {
 	height float64 // meter
 }
 
-// bmi calculates the body mass index of player.
-func (p *person) bmi() float64 {
+type myInt int
+
+func (i myInt) double() int {
+	return 2 * int(i)
+}
+
+// bmi calculates the body mass index of person.
+func (p person) bmi() float64 {
 	return float64(p.weight) / (p.height * p.height)
+}
+
+func bmi() {
+	fmt.Println()
+}
+
+func (p person) setName(name string) {
+	p.name = name
 }
 
 func main() {
 
-	// Create a few players.
+	var v myInt = 10
+	fmt.Println(v.double())
+
+	// Create a few people.
 	ps := []person{
-		{"ada", 79, 1.80},
-		{"bob", 150, 2.0},
-		{"dan", 55, 1.65},
+		person{"ada", 79, 1.80},
+		person{"bob", 150, 2.0},
+		person{"dan", 55, 1.65},
 	}
 
-	// Display the batting average for each player.
 	for i := range ps {
 		fmt.Printf("%s: bmi=%2.2f\n", ps[i].name, ps[i].bmi())
 	}
 
-	// Why did I not choose this form?
+	// ps[0].setName("Changed")
+
 	for _, p := range ps {
 		fmt.Printf("%s: bmi=%2.2f\n", p.name, p.bmi())
 	}
