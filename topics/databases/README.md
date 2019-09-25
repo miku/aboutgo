@@ -126,7 +126,7 @@ Insertion and query example.
 Transaction example.
 
 ```go
-deleteStmt, err := database.Prepare("update task set is_deleted='Y',last_modified_at=datetime() where id=?")
+deleteStmt, err := database.Prepare("update task set is_deleted='Y', last_modified_at=datetime() where id=?")
 if err != nil {
     fmt.Println(err)
 }
@@ -148,3 +148,11 @@ if err != nil {
 A webcapture tool.
 
 * [A web capture tool](example1/main.go)
+
+## Exercises
+
+* 1) Add a new subcommand - e.g. "show" - that takes an ID of a capture  and
+     displays the webpage.
+* 2) Add a new subcommand to show all captures of a given URL. Try to utilize
+     [getAndSelect](https://jmoiron.github.io/sqlx/#getAndSelect) shortcuts to
+     deserialize a row into a WebCapture struct.
