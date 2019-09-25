@@ -83,7 +83,7 @@ important standard library packages and basic services.
 
 # Services
 
-* Servers [services](../../topics/services)
+* Services [services](../../topics/services)
 
 # Final Project
 
