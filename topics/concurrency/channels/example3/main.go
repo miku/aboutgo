@@ -10,6 +10,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"runtime"
 	"strings"
 	"sync"
 )
@@ -72,11 +73,15 @@ func main() {
 
 	var wg sync.WaitGroup
 
-	for i := 0; i < 1000; i++ {
+	// Start some workers.
+	for i := 0; i < 100; i++ {
 		wg.Add(1)
 		go worker(queue, out, &wg)
 	}
 
+	log.Printf("NumGoroutines=%v", runtime.NumGoroutine())
+
+	// Start the fan-in go routine.
 	go writer(out, done)
 
 	for {
