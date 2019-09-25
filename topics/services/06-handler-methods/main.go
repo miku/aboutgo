@@ -23,6 +23,8 @@ func (s *Service) Echo(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 
+	log.Println("http://localhost:8000")
+
 	svc := Service{Name: "Service 1.0"}
 
 	// Handle registers the handler for the given pattern in the DefaultServeMux.

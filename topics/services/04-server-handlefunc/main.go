@@ -13,6 +13,8 @@ func Echo(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 
+	log.Println("http://localhost:8000")
+
 	// Handle registers the handler for the given pattern in the DefaultServeMux.
 	http.HandleFunc("/index", Echo)
 

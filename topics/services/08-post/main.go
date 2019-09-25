@@ -1,14 +1,18 @@
 package main
 
 import (
-	"fmt"
+	"io"
 	"log"
 	"net/http"
 )
 
-// Echo is a basic HTTP Handler.
-func Echo(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "You asked to %s %s\n", r.Method, r.URL.Path)
+func handler(w http.ResponseWriter, r *http.Request) {
+	err := r.ParseForm()
+	if err != nil {
+		panic(err)
+	}
+	msg := r.PostForm.Get("msg") // usr r.Form for query parameter
+	io.WriteString(w, msg)
 }
 
 func main() {
@@ -16,7 +20,7 @@ func main() {
 	log.Println("http://localhost:8000")
 
 	// Convert the Echo function to a type that implements http.Handler
-	h := http.HandlerFunc(Echo)
+	h := http.HandlerFunc(handler)
 
 	// Start a server listening on port 8000 and responding using Echo.
 	if err := http.ListenAndServe("localhost:8000", h); err != nil {
