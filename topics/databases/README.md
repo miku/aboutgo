@@ -29,7 +29,6 @@ Two popular examples:
 * sqlx.Stmt - analagous to sql.Stmt, a representation of a prepared statement
 * sqlx.NamedStmt - a representation of a prepared statement with support for named parameters
 
-
 ## A complete example
 
 We first create a user table with the following schema:
@@ -126,7 +125,7 @@ Insertion and query example.
 
 Transaction example.
 
-```sql
+```go
 deleteStmt, err := database.Prepare("update task set is_deleted='Y',last_modified_at=datetime() where id=?")
 if err != nil {
     fmt.Println(err)
@@ -143,3 +142,9 @@ if err != nil {
     tx.Commit()
 }
 ```
+
+## Code Review
+
+A webcapture tool.
+
+* [A web capture tool](example1/main.go)
