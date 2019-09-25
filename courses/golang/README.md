@@ -85,12 +85,6 @@ important standard library packages and basic services.
 
 * Servers [services](../../topics/services)
 
-* Overview about the net and net/http packages [services/net](../../topics/services/net)
-* Writing HTTP servers [services/servers](../../topics/services/servers)
-* Writing HTTP handlers [services/handlers](../../topics/services/handlers)
-* Structuring basic HTTP services [services/layout](../../topics/services/layout)
-* Routing with gorilla/mux [services/mux](../../topics/services/mux)
-
 # Final Project
 
 * Final project [final](../../topics/final)
