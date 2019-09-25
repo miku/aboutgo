@@ -21,3 +21,5 @@ The package contains utilities, of which
 data from a reader to a writer.
 
 ## Exercise
+
+* [A simple cat in Go](template1/main.go) ([Answer](exercise1/main.go))

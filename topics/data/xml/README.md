@@ -28,7 +28,7 @@ type OaiIdentifier struct {
         RepositoryIdentifier string   `xml:"repositoryIdentifier"` // inspirehep.net
         Delimiter            string   `xml:"delimiter"`            // :
         SampleIdentifier     string   `xml:"sampleIdentifier"`     // oai:inspirehep.net:123
-} 
+}
 
 ```
 
@@ -38,7 +38,7 @@ The [xml.Marshal](https://golang.org/pkg/encoding/xml/#Marshal) functions return
 
 ```go
 var ip IPInfo
-b, err := xml.Marshal(ip) 
+b, err := xml.Marshal(ip)
 if err != nil {
     log.Fatal(err)
 }
@@ -51,7 +51,7 @@ We can turn bytes into struct through [xml.Unmarshal](https://golang.org/pkg/enc
 
 ```go
 var ip IPInfo
-err := xml.Unmarshal(data, ip) 
+err := xml.Unmarshal(data, ip)
 if err != nil {
     log.Fatal(err)
 }
@@ -60,4 +60,7 @@ fmt.Printf("%v", ip)
 
 ## Helper
 
-A tool like [XMLGen](https://github.com/dutchcoders/XMLGen) or [zek](https://github.com/miku/zek) (also online: https://www.onlinetool.io/xmltogo/) can help shorten the process from data to structs.
+A tool like [XMLGen](https://github.com/dutchcoders/XMLGen) or
+[zek](https://github.com/miku/zek) (also online:
+https://www.onlinetool.io/xmltogo/) can help shorten the process from data to
+structs.

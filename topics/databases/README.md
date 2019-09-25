@@ -15,6 +15,20 @@ Two popular examples:
 >  The sql.DB abstraction is designed to keep you from worrying about how to
 >  manage concurrent access to the underlying datastore.
 
+## Extensions to database/sql
+
+> sqlx is a package for Go which provides a set of extensions on top of the
+> excellent built-in database/sql package.
+
+* [Illustrated Guide](https://jmoiron.github.io/sqlx/)
+
+## Core types
+
+* sqlx.DB - analagous to sql.DB, a representation of a database
+* sqlx.Tx - analagous to sql.Tx, a representation of a transaction
+* sqlx.Stmt - analagous to sql.Stmt, a representation of a prepared statement
+* sqlx.NamedStmt - a representation of a prepared statement with support for named parameters
+
 ## A complete example
 
 We first create a user table with the following schema:
@@ -111,8 +125,8 @@ Insertion and query example.
 
 Transaction example.
 
-```sql
-deleteStmt, err := database.Prepare("update task set is_deleted='Y',last_modified_at=datetime() where id=?")
+```go
+deleteStmt, err := database.Prepare("update task set is_deleted='Y', last_modified_at=datetime() where id=?")
 if err != nil {
     fmt.Println(err)
 }
@@ -128,3 +142,17 @@ if err != nil {
     tx.Commit()
 }
 ```
+
+## Code Review
+
+A webcapture tool.
+
+* [A web capture tool](example1/main.go)
+
+## Exercises
+
+* 1) Add a new subcommand - e.g. "show" - that takes an ID of a capture  and
+     displays the webpage.
+* 2) Add a new subcommand to show all captures of a given URL. Try to utilize
+     [getAndSelect](https://jmoiron.github.io/sqlx/#getAndSelect) shortcuts to
+     deserialize a row into a WebCapture struct.

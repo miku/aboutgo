@@ -34,7 +34,7 @@ The [json.Marshal](https://golang.org/pkg/encoding/json/#Marshal) functions retu
 
 ```go
 var ip IPInfo
-b, err := json.Marshal(ip) 
+b, err := json.Marshal(ip)
 if err != nil {
     log.Fatal(err)
 }
@@ -47,7 +47,7 @@ We can turn bytes into struct through [json.Unmarshal](https://golang.org/pkg/en
 
 ```go
 var ip IPInfo
-err := json.Unmarshal(data, ip) 
+err := json.Unmarshal(data, ip)
 if err != nil {
     log.Fatal(err)
 }
@@ -57,3 +57,6 @@ fmt.Printf("%v", ip)
 ## Helper
 
 A tool like [JSONGen](https://github.com/bemasher/JSONGen) can help shorten the process from data to structs.
+
+## Exercise
+

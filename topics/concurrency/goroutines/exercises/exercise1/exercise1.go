@@ -32,7 +32,7 @@ func main() {
 	// Declare an anonymous function and create a goroutine.
 	go func() {
 		// Count down from 100 to 0.
-		for count := 100; count >= 0; count-- {
+		for count := 100000; count >= 0; count-- {
 			fmt.Printf("[A:%d]\n", count)
 		}
 
@@ -43,7 +43,7 @@ func main() {
 	// Declare an anonymous function and create a goroutine.
 	go func() {
 		// Count up from 0 to 100.
-		for count := 0; count <= 100; count++ {
+		for count := 0; count <= 100000; count++ {
 			fmt.Printf("[B:%d]\n", count)
 		}
 

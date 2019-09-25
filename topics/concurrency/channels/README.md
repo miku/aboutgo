@@ -92,9 +92,7 @@ The behavior of a channel is directly influenced by its current `State`. The sta
 
 * [Basic mechanics](example1/example1.go) ([Go Playground](https://play.golang.org/p/UY5gai9Ojsm))
 * [Tennis game](example2/example2.go) ([Go Playground](https://play.golang.org/p/PvFKD_tNwir))
-* [Relay race](example3/example3.go) ([Go Playground](https://play.golang.org/p/OLdBCGUvzbx))
-* [Fan out pattern](example4/example4.go) ([Go Playground](https://play.golang.org/p/zxzHAHIr3Xj))
-* [Monitor running time](example5/example5.go) ([Go Playground](https://play.golang.org/p/vZ95XZuYVPF))
+* [Parallel web crawler](example3/example3.go)
 
 ## Advanced Code Review
 
@@ -108,7 +106,7 @@ Write a program where two goroutines pass an integer back and forth ten times. D
 * [Template](exercises/template1/template1.go) ([Go Playground](https://play.golang.org/p/gv9lxA3qhH-)) |
 * [Answer](exercises/exercise1/exercise1.go) ([Go Playground](https://play.golang.org/p/8S685ND54dW))
 
-### Exercise 2
+### Exercise 2 (*)
 Write a program that uses a fan out pattern to generate 100 random numbers concurrently. Have each goroutine generate a single random number and return that number to the main goroutine over a buffered channel. Set the size of the buffer channel so no send ever blocks. Don't allocate more buffers than you need. Have the main goroutine display each random number it receives and then terminate the program.
 
 * [Template](exercises/template2/template2.go) ([Go Playground](https://play.golang.org/p/9_b6YcBuSOR)) |
@@ -120,7 +118,7 @@ Write a program that generates up to 100 random numbers concurrently. Do not sen
 * [Template](exercises/template3/template3.go) ([Go Playground](https://play.golang.org/p/TQMIiAelw5L)) |
 * [Answer](exercises/exercise3/exercise3.go) ([Go Playground](https://play.golang.org/p/76xnxU1yL5K))
 
-### Exercise 4
+### Exercise 4 (*)
 Write a program that generates up to 100 random numbers concurrently using a worker pool. Reject even values. Instruct the workers to shutdown with 100 odd numbers have been collected.
 
 * [Template](exercises/template4/template4.go) ([Go Playground](https://play.golang.org/p/2EShivwAWlq)) |

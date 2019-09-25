@@ -72,3 +72,13 @@ func TestFlagParser(t *testing.T) {
 }
 ```
 
+## Exercise
+
+In the file `util.go` there is a function `MinInt`.
+
+* Create a file `util_test.go`
+* Write a testing function for `MinInt`
+
+----
+
+* Solution, [playground](https://play.golang.org/p/1g5pEF4W2Ym)

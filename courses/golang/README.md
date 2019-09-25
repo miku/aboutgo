@@ -53,8 +53,8 @@ important standard library packages and basic services.
 
 * CSP [concurrency/csp](../../topics/concurrency/csp)
 * Goroutines [concurrency/goroutines](../../topics/concurrency/goroutines)
-* Channels [concurrency/channels](../../topics/concurrency/channels)
 * The select statement [concurrency/select](../../topics/concurrency/select)
+* Channels [concurrency/channels](../../topics/concurrency/channels)
 
 # Tooling
 
@@ -66,9 +66,9 @@ important standard library packages and basic services.
 # Packages
 
 * context [packages/context](../../topics/packages/context)
-* flag [packages/context](../../topics/packages/flag)
-* io [packages/context](../../topics/packages/io)
-* logging [packages/context](../../topics/packages/logging)
+* flag [packages/flag](../../topics/packages/flag)
+* io [packages/io](../../topics/packages/io)
+* logging [packages/logging](../../topics/packages/logging)
 
 # Working with Data
 
@@ -79,16 +79,15 @@ important standard library packages and basic services.
 
 # Working with Databases
 
-* The database/sql interface [db/sql](../../topics/db/sql)
-* General purpose extensions for database/sql [db/sqlx](../../topics/db/sqlx)
+* Working with Databases [databases](../../topics/databases)
 
 # Services
 
-* Overview about the net and net/http packages [services/net](../../topics/services/net)
-* Writing HTTP servers [services/servers](../../topics/services/servers)
-* Writing HTTP handlers [services/handlers](../../topics/services/handlers)
-* Structuring basic HTTP services [services/layout](../../topics/services/layout)
-* Routing with gorilla/mux [services/mux](../../topics/services/mux)
+* Services [services](../../topics/services)
+
+# Final Project
+
+* Final project [final](../../topics/final)
 
 # Going Forward
 
