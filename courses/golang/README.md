@@ -83,6 +83,8 @@ important standard library packages and basic services.
 
 # Services
 
+* Servers [services](../../topics/services)
+
 * Overview about the net and net/http packages [services/net](../../topics/services/net)
 * Writing HTTP servers [services/servers](../../topics/services/servers)
 * Writing HTTP handlers [services/handlers](../../topics/services/handlers)
