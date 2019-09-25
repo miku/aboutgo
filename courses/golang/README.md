@@ -79,7 +79,7 @@ important standard library packages and basic services.
 
 # Working with Databases
 
-* Working with Databases [databases](../../topics/database)
+* Working with Databases [databases](../../topics/databases)
 
 # Services
 
