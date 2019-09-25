@@ -60,3 +60,4 @@ A tool like [JSONGen](https://github.com/bemasher/JSONGen) can help shorten the 
 
 ## Exercise
 
+* [Template](template1/main.go) ([Answer](exercise1/main.go))
