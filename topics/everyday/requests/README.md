@@ -19,3 +19,5 @@ resp, err := http.Get("http://example.com/")
 * [Example 4](example4/main.go)
 * [Example 5](example5/main.go)
 
+## Exercises
+
