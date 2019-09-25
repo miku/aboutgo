@@ -10,3 +10,12 @@ return a `http.Response` and an error.
 ```
 resp, err := http.Get("http://example.com/")
 ```
+
+## Code Review
+
+* [Example 1](example1/main.go)
+* [Example 2](example2/main.go)
+* [Example 3](example3/main.go)
+* [Example 4](example4/main.go)
+* [Example 5](example5/main.go)
+
