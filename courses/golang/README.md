@@ -66,9 +66,9 @@ important standard library packages and basic services.
 # Packages
 
 * context [packages/context](../../topics/packages/context)
-* flag [packages/context](../../topics/packages/flag)
-* io [packages/context](../../topics/packages/io)
-* logging [packages/context](../../topics/packages/logging)
+* flag [packages/flag](../../topics/packages/flag)
+* io [packages/io](../../topics/packages/io)
+* logging [packages/logging](../../topics/packages/logging)
 
 # Working with Data
 
