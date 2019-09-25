@@ -15,6 +15,21 @@ Two popular examples:
 >  The sql.DB abstraction is designed to keep you from worrying about how to
 >  manage concurrent access to the underlying datastore.
 
+## Extensions to database/sql
+
+> sqlx is a package for Go which provides a set of extensions on top of the
+> excellent built-in database/sql package.
+
+* [Illustrated Guide](https://jmoiron.github.io/sqlx/)
+
+## Core types
+
+* sqlx.DB - analagous to sql.DB, a representation of a database
+* sqlx.Tx - analagous to sql.Tx, a representation of a transaction
+* sqlx.Stmt - analagous to sql.Stmt, a representation of a prepared statement
+* sqlx.NamedStmt - a representation of a prepared statement with support for named parameters
+
+
 ## A complete example
 
 We first create a user table with the following schema:
