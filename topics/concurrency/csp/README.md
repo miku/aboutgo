@@ -35,4 +35,4 @@ The scheduler is part of the runtime and contained in any compiled binary.
 
 ## Code Review
 
-* [NumCPU](examples1/main.go)
+* [NumCPU](example1/main.go)
