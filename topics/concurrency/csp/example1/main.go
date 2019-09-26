@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"runtime"
+	"time"
 )
 
 func main() {
@@ -11,8 +12,10 @@ func main() {
 	// CPUs usable by the current process.
 	fmt.Println(runtime.NumCPU())
 
-	// go func() {}()
+	go func() {
+
+	}()
 	fmt.Println(runtime.NumGoroutine())
-	// time.Sleep(1 * time.Second)
+	time.Sleep(1 * time.Second)
 
 }
