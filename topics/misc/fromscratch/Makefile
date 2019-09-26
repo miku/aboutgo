@@ -19,8 +19,10 @@ image: fetch
 	# REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 	# gosp/fetch          latest              210b92811047        2 minutes ago       7.08MB
 	docker build -t gosp/fetch .
+	docker rmi $(docker images -f dangling=true -q)
 
-imagecgo:
+imagecgo: fetch
 	# http://kefblog.com/2017-07-04/Golang-ang-docker
 	docker build -t gosp/fetchcgo -f Dockerfile.cgo .
+	docker rmi $(docker images -f dangling=true -q)
 
