@@ -28,5 +28,5 @@ imagecgo: fetch
 
 .PHONY: clean-dangling
 clean-dangling:
-	docker rmi $(docker images -f dangling=true -q)
+	docker rmi $$(docker images -f dangling=true -q)
 
