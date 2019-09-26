@@ -46,6 +46,8 @@ func prependSchema(s string) string {
 }
 
 func main() {
+	showID := flag.Int("i", 0, "specify the id to show")
+
 	flag.Parse()
 
 	db, err := sqlx.Connect("sqlite3", "data.db") // Open and connect.
@@ -66,6 +68,13 @@ func main() {
 	var insertStmt = `INSERT INTO webcapture (link, text, statuscode, time) VALUES (?, ?, ?, ?)`
 
 	switch mode {
+	case "s", "show":
+		var wc WebCapture
+		err := db.Get(&wc, "SELECT text FROM webcapture WHERE id = ?", showID)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Println(wc.Text)
 	case "g", "get":
 		if flag.NArg() < 2 {
 			log.Fatal("use: get URL")
