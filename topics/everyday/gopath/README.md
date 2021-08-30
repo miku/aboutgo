@@ -3,7 +3,7 @@
 Defines location of a workspace. A workspace follows a fixed directory layout.
 
 * [GOPATH](https://github.com/golang/go/wiki/GOPATH)
-* [How to set GOPATH? ](https://github.com/golang/go/wiki/SettingGOPATH)
+* [How to set GOPATH?](https://github.com/golang/go/wiki/SettingGOPATH)
 
 ## Previous experiences differed
 
