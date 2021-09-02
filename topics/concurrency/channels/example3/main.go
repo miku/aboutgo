@@ -1,103 +1,72 @@
-// Parallel link checker.
+// All material is licensed under the Apache License Version 2.0, January 2004
+// http://www.apache.org/licenses/LICENSE-2.0
+
+// Sample program to show how to use an unbuffered channel to
+// simulate a relay race between four goroutines.
 package main
 
 import (
-	"bufio"
-	"bytes"
-	"encoding/json"
 	"fmt"
-	"io"
-	"log"
-	"net/http"
-	"os"
-	"runtime"
-	"strings"
 	"sync"
+	"time"
 )
 
-type result struct {
-	Link       string `json:"link,omitempty"`
-	StatusCode int    `json:"code,omitempty"`
-	Error      error  `json:"error,omitempty"`
-}
-
-func (r result) WriteTo(w io.Writer) (int64, error) {
-	b, err := json.Marshal(r)
-	if err != nil {
-		return 0, err
-	}
-	b = append(b, '\n')
-	n, err := w.Write(b)
-	return int64(n), err
-}
-
-func worker(work chan string, out chan string, wg *sync.WaitGroup) {
-	defer wg.Done()
-
-	for link := range work {
-		var buf bytes.Buffer
-		resp, err := http.Get(link)
-		if err != nil {
-			r := result{Link: link, Error: err}
-			if _, err := r.WriteTo(&buf); err != nil {
-				log.Fatal(err)
-			}
-			continue
-		}
-		defer resp.Body.Close()
-		r := result{Link: link, StatusCode: resp.StatusCode}
-		if _, err := r.WriteTo(&buf); err != nil {
-			log.Fatal(err)
-		}
-		out <- buf.String()
-	}
-}
-
-func writer(out chan string, done chan bool) {
-	for line := range out {
-		fmt.Printf(line)
-	}
-	done <- true
-}
+// wg is used to wait for the program to finish.
+var wg sync.WaitGroup
 
 func main() {
-	f, err := os.Open("small.txt")
-	if err != nil {
-		log.Fatal(err)
-	}
-	br := bufio.NewReader(f)
 
-	queue := make(chan string)
-	out := make(chan string)
-	done := make(chan bool)
+	// Create an unbuffered channel.
+	track := make(chan int)
 
-	var wg sync.WaitGroup
+	// Add a count of one for the last runner.
+	wg.Add(1)
 
-	// Start some workers.
-	for i := 0; i < 100; i++ {
-		wg.Add(1)
-		go worker(queue, out, &wg)
-	}
+	// First runner to his mark.
+	go Runner(track)
 
-	log.Printf("NumGoroutines=%v", runtime.NumGoroutine())
+	// Start the race.
+	track <- 1
 
-	// Start the fan-in go routine.
-	go writer(out, done)
-
-	for {
-		line, err := br.ReadString('\n')
-		if err == io.EOF {
-			break
-		}
-		if err != nil {
-			log.Fatal(err)
-		}
-		link := strings.TrimSpace(line)
-		queue <- link
-	}
-
-	close(queue)
+	// Wait for the race to finish.
 	wg.Wait()
-	close(out)
-	<-done
+}
+
+// Runner simulates a person running in the relay race.
+func Runner(track chan int) {
+
+	// The number of exchanges of the baton.
+	const maxExchanges = 4
+
+	var exchange int
+
+	// Wait to receive the baton.
+	baton := <-track
+
+	// Start running around the track.
+	fmt.Printf("Runner %d Running With Baton\n", baton)
+
+	// New runner to the line.
+	if baton < maxExchanges {
+		exchange = baton + 1
+		fmt.Printf("Runner %d To The Line\n", exchange)
+		go Runner(track)
+	}
+
+	// Running around the track.
+	time.Sleep(100 * time.Millisecond)
+
+	// Is the race over.
+	if baton == maxExchanges {
+		fmt.Printf("Runner %d Finished, Race Over\n", baton)
+		wg.Done()
+		return
+	}
+
+	// Exchange the baton for the next runner.
+	fmt.Printf("Runner %d Exchange With Runner %d\n",
+		baton,
+		exchange)
+
+	track <- exchange
 }
